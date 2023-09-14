@@ -10,6 +10,8 @@ mongo.createConnection().then((_) => {
     logger.info(`SUCCESS CONNECTING TO DATABASE MONGODB`)
 })
 
+// app main
+
 const app = express()
 
 app.use(cors())
