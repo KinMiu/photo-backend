@@ -15,7 +15,7 @@ mongo.createConnection().then((_) => {
 const app = express()
 
 const corsOptions = {
-    origin: "https://photo-frontend.vercel.app",
+    origin: ["https://photo-frontend.vercel.app", "http://localhost:3001"],
     optionsSuccessStatus: 200
 }
 
