@@ -29,6 +29,19 @@ const getAll = async (req, res) => {
     res.json(response)
 }
 
+const getAllByUser = async (req, res) => {
+    try {
+        // const userID = req.params.id
+        // console.log(userID)
+        const data = await service.getAllByUser({ IDUSER: req.params.id })
+        response = { ...requestResponse.success, data }
+    } catch (error) {
+        logger.error(error)
+        response = { ...requestResponse.server_error }
+    }
+    res.json(response)
+}
+
 const getById = async (req, res) => {
     try {
         const data = await service.getById({ IDUSER: req.params.id })
@@ -76,6 +89,7 @@ const getCount = async (req, res) => {
 module.exports = {
     create,
     getAll,
+    getAllByUser,
     getById,
     updateOne,
     deleteOne,

@@ -4,6 +4,7 @@ const controller = require('../controller/controller_photos')
 
 router.post('/create', controller.create)
 router.get('/get', controller.getAll)
+router.get('/getbyuser/:id', controller.getAllByUser)
 router.get('/get/:id', controller.getById)
 router.put('/edit/:id', controller.updateOne)
 router.delete('/delete/:id', controller.deleteOne)
