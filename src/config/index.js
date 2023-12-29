@@ -26,9 +26,6 @@ const cors = (req, res, next) => {
     res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization")
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
 
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
     next()
 }
 
