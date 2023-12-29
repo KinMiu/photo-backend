@@ -3,7 +3,7 @@ require('dotenv').config()
 const mongoURL = process.env.NODE_ENV === 'production' ? process.env.MONGO_PROD : process.env.MONGO_DEV
 
 const mongoOptions = {
-    // keepAlive: true,
+    keepAlive: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     autoIndex: false
