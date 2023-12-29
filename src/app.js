@@ -20,6 +20,12 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(router)
 
+app.get('/', (req, res) => {
+    res.json({
+        msg: 'selamat datang di Photograph API',
+    });
+});
+
 module.exports = app
 
 
