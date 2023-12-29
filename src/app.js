@@ -9,6 +9,8 @@ const { requestResponse } = require('./utils/index')
 
 mongo.createConnection().then((_) => {
     logger.info(`SUCCESS CONNECTING TO DATABASE MONGODB`)
+}).catch((err) => {
+    console.error(err)
 })
 
 const app = express()
