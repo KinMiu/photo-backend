@@ -3,23 +3,18 @@ const express = require('express')
 const router = require('./routes')
 const mongo = require('./database/mongo')
 const logger = require('./utils/logger')
-const cors = require('cors')
+const cookies = require('cookie-parser')
+const { cors } = require('./config/index')
 const { requestResponse } = require('./utils/index')
 
 mongo.createConnection().then((_) => {
     logger.info(`SUCCESS CONNECTING TO DATABASE MONGODB`)
 })
 
-// app main
-
 const app = express()
 
-const corsOptions = {
-    origin: ["https://photo-frontend.vercel.app", "http://localhost:3000"],
-    optionsSuccessStatus: 200
-}
-
-app.use(cors(corsOptions))
+app.use(cors)
+app.use(cookies())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 

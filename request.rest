@@ -1,0 +1,17 @@
+POST  http://localhost:3002/user/login
+Content-Type: application/json
+
+{
+    "USERNAME": "aldi@gmail.com",
+    "PASSWORD": "123"
+}
+
+###
+DELETE http://localhost:3002/user/logout
+
+###
+GET http://localhost:3002/user/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI3MDFkM2E3MC1kMjA4LTQ0NmMtOWUzOS03OTE1ZGEwMzkzYmEiLCJuYW1lIjoiYWt1IiwidXNlcm5hbWUiOiJhbGRpQGdtYWlsLmNvbSIsImlhdCI6MTY5NjAwMzI5MiwiZXhwIjoxNjk2MDAzMzA3fQ.oMUfCY8l809sY0fS2v5j0vF0yxlulGsaUe98ZoYnugw
+
+###
+GET http://localhost:3002/user/token
