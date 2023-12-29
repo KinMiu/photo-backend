@@ -15,7 +15,7 @@ mongo.createConnection().then((_) => {
 
 const app = express()
 
-app.use(cors)
+app.use(cors())
 app.use(cookies())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
