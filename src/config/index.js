@@ -12,7 +12,7 @@ const mongoOptions = {
 const allowedOrigins = ['http://localhost:3000']
 
 if (process.env.NODE_DEV === 'development') {
-    allowedOrigins.push('*')
+    allowedOrigins.push('https://photo-frontend.vercel.app')
 }
 
 const cors = (req, res, next) => {
