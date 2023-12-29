@@ -9,10 +9,10 @@ const mongoOptions = {
     autoIndex: false
 }
 
-const allowedOrigins = ['http://localhost:3000']
+const allowedOrigins = ['https://photo-frontend.vercel.app']
 
 if (process.env.NODE_DEV === 'development') {
-    allowedOrigins.push('https://photo-frontend.vercel.app')
+    allowedOrigins.push('*')
 }
 
 const cors = (req, res, next) => {
