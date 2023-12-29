@@ -12,6 +12,12 @@ const schema = new mongoose.Schema(
         USERNAME: {
             type: String
         },
+        ALAMAT: {
+            type: String
+        },
+        NO_TELP: {
+            type: String
+        },
         PASSWORD: {
             type: String
         },

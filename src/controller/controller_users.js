@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
     try {
         const attributes = {
             IDUSER: 1,
-            NAMA: 1,
+            NAME: 1,
             EMAIL: 1,
             ALAMAT: 1,
             NO_TELP: 1,
@@ -41,7 +41,7 @@ const getById = async (req, res) => {
     try {
         const attributes = {
             IDUSER: 1,
-            NAMA: 1,
+            NAME: 1,
             EMAIL: 1,
             ALAMAT: 1,
             NO_TELP: 1,
