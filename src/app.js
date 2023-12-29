@@ -4,8 +4,8 @@ const router = require('./routes')
 const mongo = require('./database/mongo')
 const logger = require('./utils/logger')
 const cookies = require('cookie-parser')
-// const { cors } = require('./config/index')
-const cors = require('cors')
+const { cors } = require('./config/index')
+// const cors = require('cors')
 const { requestResponse } = require('./utils/index')
 
 mongo.createConnection().then((_) => {
@@ -16,7 +16,7 @@ mongo.createConnection().then((_) => {
 
 const app = express()
 
-app.use(cors())
+app.use(cors)
 app.use(cookies())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
