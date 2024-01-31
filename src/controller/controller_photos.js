@@ -44,7 +44,7 @@ const getAllByUser = async (req, res) => {
 
 const getById = async (req, res) => {
     try {
-        const data = await service.getById({ IDUSER: req.params.id })
+        const data = await service.getById({ ID: req.params.id })
         response = { ...requestResponse.success, data }
     } catch (error) {
         logger.error(error)

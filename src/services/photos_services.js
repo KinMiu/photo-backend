@@ -37,8 +37,8 @@ const getAllByUser = async ({ IDUSER }) => {
     ]);
 };
 
-const getById = async (attributes, condition) => {
-    return model.findOne(condition, attributes)
+const getById = async (condition) => {
+    return await model.findOne(condition)
 }
 
 const updateOne = async (condition, body) => {
